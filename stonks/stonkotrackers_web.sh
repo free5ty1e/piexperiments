@@ -5,4 +5,4 @@ chromium-browser --app=https://www.robinhood.com/ --new-window --window-position
 
 sleep 45
 
-chromium-browser --app=https://coinmarketcap.com/currencies/shiba-inu/ --new-window --window-position="2,66" --window-size="1500,1200" --force-device-scale-factor=0.85 --noerrdialogs --allow-running-insecure-content --remember-cert-error-decisions --user-data-dir="/home/pi/Documents/Profiles/1" &
+chromium-browser https://coinmarketcap.com/currencies/shiba-inu/ --new-window --window-position="2,66" --window-size="1500,1200" --force-device-scale-factor=0.85 --noerrdialogs --allow-running-insecure-content --remember-cert-error-decisions --user-data-dir="/home/pi/Documents/Profiles/1" &
