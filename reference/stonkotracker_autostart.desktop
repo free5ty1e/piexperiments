@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=StonkOTrackers
+Exec=/home/pi/piexperiments/stonks/stonkotrackers_web.sh
