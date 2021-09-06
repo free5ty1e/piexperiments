@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#May need to also recreate the dev/net/tun device:
+#https://serverfault.com/questions/1003011/openvpn-error-cannot-open-tun-tap-dev-dev-net-tun-no-such-file-or-directory
+
+#mkdir -p /dev/net
+#mknod /dev/net/tun c 10 200
+#chmod 600 /dev/net/tun
+
 #https://www.ivpn.net/knowledgebase/linux/linux-autostart-openvpn-in-systemd-ubuntu/
 #If using systemd service instead of this script:
 # 1. save creds to /etc/openvpn/pass
