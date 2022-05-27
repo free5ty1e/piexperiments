@@ -1,0 +1,13 @@
+[Unit]
+Description=Transmission BitTorrent Daemon
+After=network.target
+
+[Service]
+User=pi
+Type=notify
+ExecStart=/bin/bash -c "/usr/bin/transmission-daemon -f --log-error --bind-address-ipv4=$(ip a s tun0 | awk '/inet / {print $2}')"
+ExecStop=/bin/kill -s STOP $MAINPID
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
