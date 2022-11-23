@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo apt-get -y install mpg321
+sudo apt-get -y install mpv ffmpeg
+#mpg321
