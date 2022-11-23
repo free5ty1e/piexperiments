@@ -1,0 +1,27 @@
+#!/bin/sh -e
+#
+# /etc/rc.local
+# Don't forget to sudo chmod +x /etc/rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+#Clear out the existing USB symlinks (my drive labels all start with P, and the || /bin/true suffix allows these commands to fail gracefully and continue) :
+rm -v /media/P* || /bin/true
+
+#cycle through each /dev/sd? usb drive device and tell each to rerun connect scripts in sequence with delays
+sequentialUsbDriveStartup.sh
+
+exit 0
