@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-mpg321 --verbose --random -B -K "$1"
+# mpg321 --verbose --random -B -K "$1"
+mpv --no-video --shuffle "$1"
 
 # PLAYER="mpv -vo null"
 #PLAYER="mpg321"
